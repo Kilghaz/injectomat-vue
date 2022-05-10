@@ -3,13 +3,17 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "build": "tsc",
+    "prebuild": "rimraf dist/*",
     "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
+    "build:webpack": "webpack build",
     "test:unit": "vue-cli-service test:unit",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "postbuild": "node post-build.js"
   },
   "dependencies": {
     "core-js": "^3.8.3",
+    "injectomat": "file:../injectomat/dist",
     "vue": "^3.2.13"
   },
   "devDependencies": {
@@ -27,8 +31,13 @@
     "babel-jest": "^27.0.6",
     "eslint": "^7.32.0",
     "eslint-plugin-vue": "^8.0.3",
+    "glob": "^8.0.1",
     "jest": "^27.0.5",
     "ts-jest": "^27.0.4",
-    "typescript": "~4.5.5"
+    "ts-loader": "^9.3.0",
+    "typescript": "~4.5.5",
+    "typescript-declaration-webpack-plugin": "^0.2.2",
+    "webpack": "^5.72.1",
+    "webpack-cli": "^4.9.2"
   }
 }

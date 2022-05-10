@@ -1,0 +1,10 @@
+{
+  "name": "injectomat-vue",
+  "main": "index.js",
+  "version": "0.1.0",
+  "peerDependencies": {
+    "core-js": "^3.8.3",
+    "injectomat": "file:../injectomat/dist",
+    "vue": ">=3.0.0"
+  }
+}
